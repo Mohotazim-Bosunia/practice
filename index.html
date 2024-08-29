@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="siam">
+    <meta name="keywords" content="portfolio,html,siam">
     <title>portfolio</title>
+    <!--font-awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=SUSE:wght@100..800&family=Sevillana&display=swap" rel="stylesheet">
+    <style>
+        body{
+           background-color: rgba(38, 45, 150, 0.205);
+           font-family: "Roboto", sans-serif;
+        }
+    </style>
 </head>
 <body>
     <!--section:naveber-->
-    <ul>
+   <header>
+     <ul>
         <li> <a target="_blank" href="index.html">Home</a></li>
         <li><a  href="#about">About Me</a></li>
         <li> <a  href="#skill">Skills</a></li>
         <li><a  href="#project">Projects</a></li>
         <li><a  href="#contact">Contact</a></li> 
-    </ul>
-    <!--section:intro-->
-    <header id="intro">
+      </ul>
+   </header>
+  
+   <main> <!--section:intro-->
+    <section id="intro">
         <h1>Siam Bosunia</h1>
         <em>WebDeveloper</em>
-        <a target="_blank" href="https://www.facebook.com/profile.php?id=100012411289040"> <img src="./images/IMG_20201203_155105.jpg" alt="siam" height="200">
-            <hr></a>
+         <img src="./images/xd.png" alt="siam" height="200">
+            
        
-    </header>
+    </section>
     <!--section=about-->
     <section id="about">
         <h2>About Me</h2>
@@ -41,19 +59,19 @@
                     <td>JSC</td>
                     <td>GPA:5.00</td>
                     <td>2016</td>
-                    <td>Dinajpur</td>
+                    <td rowspan="3">Dinajpur</td>
                 </tr>
                 <tr>
                     <td>SSC</td>
                     <td>GPA:5.00</td>
                     <td>2019</td>
-                    <td>Dinajpur</td>
+                    
                 </tr>
                 <tr>
                     <td>HSC</td>
                     <td>GPA:5.00</td>
                     <td>2021</td>
-                    <td>Dinajpur</td>
+                    
                 </tr>
             </tbody>
         </table>
@@ -74,8 +92,26 @@
             <li>MongoDB</li>
             <li>Typescript</li>
         </ul>
-        <dl>HTML</dl>
-        <dd>HTML is a mark up language </dd>
+     <div>
+        <h3>Skill Progress</h3>
+        <div>
+            <label for="htmlprogress">HTML</label>
+            <progress id="htmlprogress" value="90" max="100">90%</progress>
+        </div>
+        <div>
+            <label for="cssprogress">CSS</label>
+            <progress id="htmlprogress" value="85" max="100">85%</progress>
+        </div>
+        <div>
+            <label for="htmlprogress">Java Screpit</label>
+            <progress id="htmlprogress" value="75" max="100">75%</progress>
+        </div>
+     </div>
+     <div>
+        <h3>Experiance Level</h3>
+        <label for="experiancelevel">Experiance</label>
+        <meter id="experiancelevel" min="0" max="10" value="5">5 years</meter>
+     </div>
     </section>
     <!--section:project-->
     <section id="project">
@@ -89,31 +125,69 @@
             </li>
         </ol>
     </section>
+    <video width="310" controls>
+        <source src="./video/siam.mp4" type="video/mp4">
+        your browser do not support thid type of video
+    </video>
     <!--section:contact-->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form>
-            <div> <label for="name">Name:</label>
-                <input type="name" id="name" name="name">
+        <form   action="https://formspree.io/f/xyzgobjr"
+        method="POST">
+            <div> <label for="text">Name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <div><label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
             </div>
-            <div>       <label for="meassage">Meassage</label>  
+            <div>       <label for="meassage">Meassage:</label>  
+                <input type="text">
                 <textarea cols="17" rows="3"></textarea>
+            </div>
+            <div><label for="age">Age:</label>
+                <input type="number" name="age" id="age" min="18" max="30" required>
+            </div>
+            <div>
+                <label for="website">website:</label>
+                <input type="url" name="website" id="website">
+            </div>
+            <div>
+                <label for="image">Upload Image:</label>
+                <input type="file" name="image" id="image" accept="*image/*">
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <select name="subject" id="subject">
+                    <option value="inquiry">Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option valu="job opportunity">Job opportunity</option>
+                </select>
             </div>
            
             
             <button type="submit">submit</button>
             <button type="reset">clear</button>
         </form>
-    </section>
-    <!--section:footer-->
+    </section></main>
+    <!--footer-->
 
     <footer>
         <p>Copyright resurved by &copy;Siam Bosunia</p>
         <a target="_blank" href="01328603018">&phone;Call me</a><br>
-        <a target="_blank" href="mohotazimbosunia@gmail.com">Email</a>
+        <a target="_blank" href="mohotazimbosunia@gmail.com">Email</a><br>
+        
+     <div>
+        <h3>Follow Me</h3>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=100012411289040" target="_blank"><i class="fa-brands fa-facebook"></i> Visite my Facebook.</a>
+                
+            </li>
+        </ul>
+     </div>
+     <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.1853461836062!2d90.44364960982034!3d23.784241456430752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7e8b4cf4273%3A0xb80e7b94481d2585!2z4Kai4Ka-4KaV4Ka-IOCmh-CmqOCnjeCmn-CmvuCmsOCmqOCnjeCmr-CmvuCmtuCmqOCmvuCmsiDgpofgpongpqjgpr_gprDgp43gpq3gpr7gprjgpr_gpp_gpr8g4Ka54Ka44KeN4Kaf4KeH4KayIDQ!5e0!3m2!1sbn!2sbd!4v1724925959309!5m2!1sbn!2sbd" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </div>
     </footer>
 
 </body>
